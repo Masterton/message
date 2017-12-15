@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>web socket</title>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <link href="{{ base_url() }}/assets/home/css/main.css" rel="stylesheet" type="text/css" />
+    <script src='https://cdn.bootcss.com/socket.io/2.0.3/socket.io.js'></script>
+    <script src='//cdn.bootcss.com/jquery/1.11.3/jquery.js'></script>
+    <script src='{{ base_url() }}/assets/home/js/notify.js'></script>
+    <script src='{{ base_url() }}/assets/home/js/workerman_web_socket.js'></script>
+</head>
+<body>
+    <div class="notification sticky hide">
+        <p id="content"> </p>
+        <a class="close" href="javascript:"><img src="{{ base_url() }}/assets/home/image/icon-close.png" /></a>
+    </div>
+    <script>
+        $(function(){
+            getSocketToken();
+        });
+    </script>
+    <div id="footer">
+        <center id="online_count_box"></center>
+        <center id="online_page_count_box"></center>
+    </div>
+</body>
+</html>
